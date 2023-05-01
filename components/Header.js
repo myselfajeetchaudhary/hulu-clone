@@ -9,10 +9,11 @@ import {
   UserIcon,
   RectangleStackIcon,
 } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 function Header() {
   return (
-    <header className="flex flex-col items-center m-5 md:flex-row md:justify-between">
+    <header className="flex flex-col items-center m-5 lg:mt-8 md:flex-row md:justify-between">
       <div className="flex lg:flex-grow justify-between max-w-2xl">
         <HeaderItem Icon={HomeIcon} title="HOME" />
         <HeaderItem Icon={BoltIcon} title="TRENDING" />
@@ -21,7 +22,9 @@ function Header() {
         <HeaderItem Icon={MagnifyingGlassIcon} title="SEARCH" />
         <HeaderItem Icon={UserIcon} title="ACCOUNT" />
       </div>
-      <Image className="md:-mt-5 md:mr-7" src={hululogo} alt="Hulu Logo" />
+      <Link href="/">
+        <Image className="md:-mt-5 md:mr-7" src={hululogo} alt="Hulu Logo" />
+      </Link>
     </header>
   );
 }
